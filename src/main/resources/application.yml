@@ -1,0 +1,13 @@
+
+
+server:
+  port: 8080
+
+service:
+  open-weather:
+    api-history:
+      endpoint: https://api.openweathermap.org/data/2.5/onecall/timemachine
+    api-data:
+      endpoint: https://api.openweathermap.org/data/2.5/weather
+    appId: 04671daf183697e1c2507572e488df70
+    units: metric
