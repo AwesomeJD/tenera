@@ -34,18 +34,4 @@ public class OpenWeatherServiceTest {
         // then
         assertNotNull(response.getMain().getTemp());
     }
-
-    @Test
-    public void callOpenWeatherApiSuccessForHistoryWithCoordinates() {
-        // given
-        // Coordinates of Berlin
-        final Double lon = 13.4105;
-        final Double lat = 52.5244;
-        final Coord coordinate = Coord.builder().lat(lat).lon(lon).build();
-        // when
-        final HistoryWeatherResponse response =
-                openWeatherService.getWeatherHistoryFromCoordinate(coordinate);
-        // then
-        assertNotNull(response.getCurrent().getTemp());
-    }
 }

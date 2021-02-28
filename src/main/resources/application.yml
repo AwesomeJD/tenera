@@ -9,7 +9,7 @@ service:
       endpoint: https://api.openweathermap.org/data/2.5/onecall/timemachine
     api-data:
       endpoint: https://api.openweathermap.org/data/2.5/weather
-    appId: 04671daf183697e1c2507572e488df70
+    appId: MDQ2NzFkYWYxODM2OTdlMWMyNTA3NTcyZTQ4OGRmNzA=
     units: metric
   umbrella:
     weathers:

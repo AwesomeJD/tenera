@@ -66,8 +66,11 @@ public class WeatherService {
             throw new ApplicationException(
                     ErrorConstants.NO_HISTORY_ERROR_CODE, ErrorConstants.NO_HISTORY_ERROR_MESSAGE);
         }
-        final HistoryWeatherResponse historyWeatherResponse = new HistoryWeatherResponse();
+        return computeHistoryWeatherResponse(weatherHistoryList);
+    }
 
+    private HistoryWeatherResponse computeHistoryWeatherResponse(List<WeatherHistory> weatherHistoryList) {
+        final HistoryWeatherResponse historyWeatherResponse = new HistoryWeatherResponse();
         Double avgTemp = 0.0;
         Integer avgPressure = 0;
         List<CurrentWeatherResponse> currentWeatherResponses = new ArrayList<>();

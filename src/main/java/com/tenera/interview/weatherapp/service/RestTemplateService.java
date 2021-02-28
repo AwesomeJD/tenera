@@ -26,7 +26,6 @@ public class RestTemplateService {
 
     public <T> T getResponse(final UriComponentsBuilder builder, final Class<T> responseClass) {
         final String uri = builder.toUriString();
-        LOGGER.info(uri, () -> "The URI formed is {}");
         ResponseEntity<T> response = null;
         try {
             response =
