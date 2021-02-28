@@ -1,7 +1,5 @@
 package com.tenera.interview.weatherapp.service;
 
-import com.tenera.interview.weatherapp.model.openweather.response.history.HistoryWeatherResponse;
-import com.tenera.interview.weatherapp.model.openweather.response.weather.Coord;
 import com.tenera.interview.weatherapp.model.openweather.response.weather.OpenWeatherResponse;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
