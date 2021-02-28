@@ -9,6 +9,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -32,6 +33,8 @@ public class RestTemplateService {
                     restTemplate.exchange(
                             new RequestEntity<>(HttpMethod.GET, builder.build().toUri()),
                             responseClass);
+        } catch (HttpClientErrorException httpClientErrorException) {
+                throw new ApplicationException(ErrorConstants.OPEN_WEATHER_API_ERROR_CODE, httpClientErrorException.getMessage());
         } catch (Exception exception) {
             throw new ApplicationException(
                     ErrorConstants.OPEN_WEATHER_API_ERROR_CODE,

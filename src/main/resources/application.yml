@@ -5,8 +5,6 @@ server:
 
 service:
   open-weather:
-    api-history:
-      endpoint: https://api.openweathermap.org/data/2.5/onecall/timemachine
     api-data:
       endpoint: https://api.openweathermap.org/data/2.5/weather
     appId: MDQ2NzFkYWYxODM2OTdlMWMyNTA3NTcyZTQ4OGRmNzA=
