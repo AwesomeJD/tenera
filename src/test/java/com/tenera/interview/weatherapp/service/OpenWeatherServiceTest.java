@@ -1,7 +1,5 @@
 package com.tenera.interview.weatherapp.service;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import com.tenera.interview.weatherapp.model.openweather.response.history.HistoryWeatherResponse;
 import com.tenera.interview.weatherapp.model.openweather.response.weather.Coord;
 import com.tenera.interview.weatherapp.model.openweather.response.weather.OpenWeatherResponse;
@@ -10,6 +8,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest

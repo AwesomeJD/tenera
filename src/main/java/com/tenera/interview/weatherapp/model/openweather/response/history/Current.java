@@ -1,11 +1,12 @@
 package com.tenera.interview.weatherapp.model.openweather.response.history;
 
 import com.tenera.interview.weatherapp.model.openweather.response.weather.Weather;
-import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @Builder

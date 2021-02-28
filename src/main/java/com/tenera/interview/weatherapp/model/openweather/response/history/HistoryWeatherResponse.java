@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class HistoryWeatherResponse {
-
     private Double lat;
     private Double lon;
     private String timezone;
