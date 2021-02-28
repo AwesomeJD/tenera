@@ -41,6 +41,7 @@ public class OpenWeatherService {
         final UriComponentsBuilder builder =
                 UriComponentsBuilder.fromUriString(currentWeatherEndpoint)
                         .queryParam(ApplicationConstants.QUERY_PARAM_WEATHER_CITY, cityName)
+                        .queryParam(ApplicationConstants.QUERY_PARAM_UNITS, units)
                         .queryParam(ApplicationConstants.QUERY_PARAM_APP_ID, appid);
         final OpenWeatherResponse response =
                 restTemplateService.getResponse(builder, OpenWeatherResponse.class);

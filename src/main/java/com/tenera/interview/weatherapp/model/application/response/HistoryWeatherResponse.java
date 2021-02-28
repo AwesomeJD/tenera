@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class HistoryWeatherResponse {
-    private Integer avgTemp;
+    private Double avgTemp;
     private Integer avgPressure;
     private List<CurrentWeatherResponse> history = null;
 }

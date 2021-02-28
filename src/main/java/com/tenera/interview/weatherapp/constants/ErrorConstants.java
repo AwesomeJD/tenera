@@ -10,5 +10,11 @@ public interface ErrorConstants {
 
     String BAD_USER_INPUT_ERROR_CODE = "1002";
 
-    String CITY_NAME_CANNOT_BE_BLANK = "Keyword cannot be blank.";
+    String DB_ERROR_CODE = "1003";
+    String DB_ERROR_MESSAGE = "Error in DB operation, please check logs.";
+
+    String NO_HISTORY_ERROR_CODE = "1004";
+    String NO_HISTORY_ERROR_MESSAGE = "No weather history for the location provided";
+
+    String LOCATION_CANNOT_BE_BLANK = "Location cannot be blank.";
 }

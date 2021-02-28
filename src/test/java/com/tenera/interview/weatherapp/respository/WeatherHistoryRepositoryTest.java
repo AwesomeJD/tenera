@@ -14,17 +14,16 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @DataJpaTest
 public class WeatherHistoryRepositoryTest {
 
-    @Autowired
-    private WeatherHistoryRepository repository;
+    @Autowired private WeatherHistoryRepository repository;
 
     @Test
-    public void testPersistOfWeatherHistory(){
-        //given
+    public void testPersistOfWeatherHistory() {
+        // given
         final WeatherHistory weatherHistoryToSave = new WeatherHistory();
         weatherHistoryToSave.setUmbrella(true);
-        //when
+        // when
         final WeatherHistory weatherHistory = repository.save(weatherHistoryToSave);
-        //then
+        // then
         assertNotNull(weatherHistory);
         assertNotNull(weatherHistory.getId());
         assertTrue(weatherHistory.getUmbrella());
