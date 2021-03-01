@@ -10,7 +10,7 @@ This is a simple spring boot application.
 4. Run the main class `WeatherAppApplication`
 
 ## End points:
-###1. For current weather:
+### 1. For current weather:
    
       
     http://localhost:8080/current?location=Berlin
@@ -22,7 +22,7 @@ Response:
       "pressure": 1035,
       "umbrella": false
     }
-###2. For History
+### 2. For History
 
     http://localhost:8080/history?location=Berlin
 
@@ -60,7 +60,7 @@ Response:
     ]
     }
 
-##Exceptions thrown
+## Exceptions thrown
 * Exception handling is done, using a framework. `ApplicationExceptionHandler` deals with
   all the exceptions thrown from application.
 
@@ -89,7 +89,7 @@ Response:
         }
 
 # Approach for the solution:
-##Solution approach
+## Solution approach
 * Fire the Open weather API
   
         https://api.openweathermap.org/data/2.5/weather?q=Berlin&units=metric&appid=04671daf183697e1c2507572e488df70
@@ -213,7 +213,7 @@ The AWS env will need **VPC**, **security groups** and an **EKS cluster** . All 
 * The whole process can be fully automated by the CircleCI. 
 
 
-#Please note:
+# Please note:
 I would have loved to do the deployment and try out hands on the tech stack of AWS and related services and Terraform.
 Unfortunately, the time constraint have not allowed me to dig deep into these. 
 
