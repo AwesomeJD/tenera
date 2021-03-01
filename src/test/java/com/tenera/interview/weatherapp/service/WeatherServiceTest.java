@@ -26,28 +26,7 @@ public class WeatherServiceTest {
         // given
         final String cityName = "Berlin,DE";
         final String openWeatherResponse =
-                "{\n"
-                        + "   \"coord\":{\n"
-                        + "      \"lon\":13.4105,\n"
-                        + "      \"lat\":52.5244\n"
-                        + "   },\n"
-                        + "   \"weather\":[\n"
-                        + "      {\n"
-                        + "         \"id\":802,\n"
-                        + "         \"main\":\"Clouds\",\n"
-                        + "         \"description\":\"scattered clouds\"\n"
-                        + "      }\n"
-                        + "   ],\n"
-                        + "   \"main\":{\n"
-                        + "      \"temp\":274.7,\n"
-                        + "      \"pressure\":1037\n"
-                        + "   },\n"
-                        + "   \"dt\":1614486083,\n"
-                        + "   \"sys\":{\n"
-                        + "      \"country\":\"DE\"\n"
-                        + "   },\n"
-                        + "   \"name\":\"Berlin\"\n"
-                        + "}\n";
+                "{\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\"}],\"main\":{\"temp\":3.58,\"pressure\":1035},\"dt\":1614568546,\"sys\":{\"country\":\"DE\"},\"name\":\"Berlin\"}";
 
         Mockito.when(openWeatherService.getWeatherFromCity(cityName))
                 .thenReturn(AppUtils.objectify(openWeatherResponse, OpenWeatherResponse.class));

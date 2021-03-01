@@ -12,7 +12,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OpenWeatherResponse {
-    private Coord coord;
     private List<Weather> weather = null;
     private Main main;
     private Integer dt;

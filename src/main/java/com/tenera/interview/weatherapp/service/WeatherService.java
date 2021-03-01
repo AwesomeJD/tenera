@@ -69,7 +69,8 @@ public class WeatherService {
         return computeHistoryWeatherResponse(weatherHistoryList);
     }
 
-    private HistoryWeatherResponse computeHistoryWeatherResponse(List<WeatherHistory> weatherHistoryList) {
+    private HistoryWeatherResponse computeHistoryWeatherResponse(
+            List<WeatherHistory> weatherHistoryList) {
         final HistoryWeatherResponse historyWeatherResponse = new HistoryWeatherResponse();
         Double avgTemp = 0.0;
         Integer avgPressure = 0;

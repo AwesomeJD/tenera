@@ -34,7 +34,9 @@ public class RestTemplateService {
                             new RequestEntity<>(HttpMethod.GET, builder.build().toUri()),
                             responseClass);
         } catch (HttpClientErrorException httpClientErrorException) {
-                throw new ApplicationException(ErrorConstants.OPEN_WEATHER_API_ERROR_CODE, httpClientErrorException.getMessage());
+            throw new ApplicationException(
+                    ErrorConstants.OPEN_WEATHER_API_ERROR_CODE,
+                    httpClientErrorException.getMessage());
         } catch (Exception exception) {
             throw new ApplicationException(
                     ErrorConstants.OPEN_WEATHER_API_ERROR_CODE,

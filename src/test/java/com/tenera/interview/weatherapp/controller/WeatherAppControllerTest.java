@@ -14,12 +14,13 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class WeatherAppControllerTest {
 
-    @Autowired
-    private TestRestTemplate restTemplate;
+    @Autowired private TestRestTemplate restTemplate;
 
     @Test
     public void testGetCurrentWeatherForALocation() {
-        final CurrentWeatherResponse response = this.restTemplate.getForObject("/current?location=Delhi", CurrentWeatherResponse.class);
+        final CurrentWeatherResponse response =
+                this.restTemplate.getForObject(
+                        "/current?location=Delhi", CurrentWeatherResponse.class);
         Assertions.assertNotNull(response);
         Assertions.assertNotNull(response.getTemp());
     }
@@ -30,7 +31,9 @@ public class WeatherAppControllerTest {
         for (int i = 1; i <= fireCurrentWeather; i++) {
             this.restTemplate.getForObject("/current?location=Delhi", CurrentWeatherResponse.class);
         }
-        final HistoryWeatherResponse response = this.restTemplate.getForObject("/history?location=Delhi", HistoryWeatherResponse.class);
+        final HistoryWeatherResponse response =
+                this.restTemplate.getForObject(
+                        "/history?location=Delhi", HistoryWeatherResponse.class);
         Assertions.assertNotNull(response);
         Assertions.assertNotNull(response.getAvgTemp());
         Assertions.assertEquals(response.getHistory().size(), fireCurrentWeather);

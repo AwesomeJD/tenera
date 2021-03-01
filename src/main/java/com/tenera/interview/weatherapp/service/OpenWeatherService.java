@@ -2,6 +2,7 @@ package com.tenera.interview.weatherapp.service;
 
 import com.tenera.interview.weatherapp.constants.ApplicationConstants;
 import com.tenera.interview.weatherapp.model.openweather.response.weather.OpenWeatherResponse;
+import com.tenera.interview.weatherapp.util.AppUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,11 +39,13 @@ public class OpenWeatherService {
                 UriComponentsBuilder.fromUriString(currentWeatherEndpoint)
                         .queryParam(ApplicationConstants.QUERY_PARAM_WEATHER_CITY, cityName)
                         .queryParam(ApplicationConstants.QUERY_PARAM_UNITS, units)
-                        .queryParam(ApplicationConstants.QUERY_PARAM_APP_ID, new String(Base64.getDecoder().decode(appid)));
+                        .queryParam(
+                                ApplicationConstants.QUERY_PARAM_APP_ID,
+                                new String(Base64.getDecoder().decode(appid)));
         final OpenWeatherResponse response =
                 restTemplateService.getResponse(builder, OpenWeatherResponse.class);
 
-        LOGGER.info("Response received from Open weather service {}", response);
+        LOGGER.info("Response received from Open weather service {}", AppUtils.stringify(response));
         return response;
     }
 }

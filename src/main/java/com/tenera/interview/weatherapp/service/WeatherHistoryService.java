@@ -41,6 +41,7 @@ public class WeatherHistoryService {
         }
     }
 
+
     public List<WeatherHistory> getWeatherHistoryFroCity(final String cityName) {
         List<WeatherHistory> weatherHistoryList = null;
         try {
